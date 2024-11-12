@@ -16,10 +16,10 @@ async function run() {
 }
 run();
 
-// // Route to get all Book
-// app.get("/api/Book", (req, res) => {
-//   res.json(Book);
-// });
+// Route to get all Book
+app.get("/api/books", (req, res) => {
+  res.json({ mongo_uri: process.env.MONGO_URI });
+});
 
 // // Route to get a single book by ID
 // app.get("/api/Book/:id", (req, res) => {
