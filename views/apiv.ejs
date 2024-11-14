@@ -1,0 +1,61 @@
+<div class="container">
+  <section id="about">
+    <h2>About API v1</h2>
+
+    <p>
+      Welcome to the <strong>API v1</strong> for managing books in the bookstore. This API allows you to perform CRUD (Create, Read, Update, Delete) operations on the book resources, and it also supports querying and pagination for fetching books.
+    </p>
+    
+    <h3>Base URL</h3>
+    <p>The base URL for this API is:</p>
+    <pre>https://api.example.com/v1</pre>
+    
+    <h3>Authentication</h3>
+    <p>
+      This API does not require authentication for accessing the public endpoints like listing or retrieving books. However, in future versions, we may require API keys or OAuth authentication to secure certain actions such as creating, updating, or deleting books.
+    </p>
+
+    <h3>Versioning</h3>
+    <p>
+      The current version of the API is <strong>v1</strong>. As we continue to improve the API, versioning will be implemented to ensure backward compatibility. Future versions may introduce breaking changes, but we will provide clear migration guides.
+    </p>
+
+    <h3>Rate Limiting</h3>
+    <p>
+      To ensure the API's stability and prevent abuse, rate limits are enforced. Each user can make up to 1000 requests per hour. Exceeding this limit will result in a 429 Too Many Requests response.
+    </p>
+
+    <h3>Content Type</h3>
+    <p>The API uses the following content types:</p>
+    <ul>
+      <li><strong>Request</strong>: <code>application/json</code></li>
+      <li><strong>Response</strong>: <code>application/json</code></li>
+    </ul>
+    
+    <h3>Supported HTTP Methods</h3>
+    <p>The following HTTP methods are supported by the API:</p>
+    <ul>
+      <li><strong>GET</strong>: Retrieve information (e.g., list or individual books).</li>
+      <li><strong>POST</strong>: Create new resources (e.g., create a new book).</li>
+      <li><strong>PUT</strong>: Update an existing resource (e.g., update book details).</li>
+      <li><strong>DELETE</strong>: Remove an existing resource (e.g., delete a book).</li>
+    </ul>
+
+    <h3>API Endpoints</h3>
+    <p>Below are the primary API endpoints available:</p>
+    <ul>
+      <li><strong>GET /books</strong> - Retrieve a list of books with optional query parameters.</li>
+      <li><strong>POST /books</strong> - Create a new book in the bookstore.</li>
+      <li><strong>GET /books/:id</strong> - Retrieve a specific book by its ID.</li>
+      <li><strong>PUT /books/:id</strong> - Update an existing book by its ID.</li>
+      <li><strong>DELETE /books/:id</strong> - Delete a specific book by its ID.</li>
+    </ul>
+
+    <h3>Contact</h3>
+    <p>If you have any questions or need support, feel free to reach out to us:</p>
+    <ul>
+      <li>Email: <a href="mailto:support@example.com">support@example.com</a></li>
+      <li>GitHub: <a href="https://github.com/example/bookstore-api" target="_blank">https://github.com/example/bookstore-api</a></li>
+    </ul>
+  </section>
+</div>

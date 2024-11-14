@@ -1,0 +1,61 @@
+<div class="container">
+  <h2 class="api_v">api v1</h2>
+  <section class="overview">
+    <h2>Overview</h2>
+    <p>Welcome to the <b>RESTful</b> Bookstore API.</p>
+    <p>
+      You can perform CRUD <i>(Create, Read, Update, Delete)</i> operations on
+      these resources using simple HTTP requests.
+    </p>
+    <p>Our API supports JSON format for both requests and responses.</p>
+    <div class="emoji">--✧ ¯\_(ツ)_/¯ ✧--</div>
+    <!-- <div>-- ✨✧(◕‿◕)✧✨ --</div>
+    <div>-- ❀(❛‿❛✿̥̥)❀ --</div>
+    <div>-- (ᵔᴥᵔ) ~♡~ --</div>
+    <div>-- ✦(｡♥‿♥｡)✦ --</div>
+    <div>-- 乁( •_• )ㄏ --</div>
+    <div>-- (╹ڡ╹ )っ ✂╰(°□° )╯ --</div>
+    <div>-- ✿(｡◕‿◕｡)✿ --</div>
+    <div>-- ⚑(｡•̀ᴗ-)✧ --</div>
+    <div>-- ⋆｡°✩(-‿◦☀)✩°｡⋆ --</div>
+    <div>-- (≖ᴗ≖✿) ♡ --</div> -->
+  </section>
+
+
+  <section class="req_container">
+    <div class="requests">
+      <div class="request_input">
+        <div class="url"><i class="fas fa-copy"></i></div>
+        <input
+          type="text"
+          id="query"
+          placeholder="Enter query, e.g., ?title=python or book ID"
+        />
+        <button>Send</button>
+      </div>
+      <div class="endpoints">
+        <small>
+          Endpoints! Try:
+          <span>books</span> &bull;
+          <span>books?q=To Kill a Mockingbird</span> &bull;
+          <span>books?limit=1</span> &bull; <span>books?limit=1&offset=2</span>
+        </small>
+      </div>
+      <div class="direct_access_link">
+        Direct access link:
+        <a href="http://localhost:8000/api/v1/books" target="_blank" rel="noopener noreferrer">http://localhost:8000/api/v1/books</a>
+      </div>
+    </div>
+    <div class="json-viewer">
+      <h3>Resources for books</h3>
+      <div class="prettify_minify_btns">
+        <button id="prettify"><i class="fas fa-align-left"></i> Prettify JSON</button>
+        <button id="minify"><i class="fas fa-compress"></i> Minify JSON</button>
+      </div>
+      <div class="data">
+        <pre id="books"></pre>
+      </div>
+      <div class="result">Result: 0</div>
+    </div>
+  </section>
+</div>

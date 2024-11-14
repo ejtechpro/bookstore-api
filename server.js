@@ -1,6 +1,7 @@
 const express = require("express");
+const path = require("path");
+const ejs = require("ejs");
 const conn = require("./config/db");
-const Book = require("./models/Book");
 require("dotenv").config();
 
 const app = express();
@@ -8,64 +9,37 @@ const PORT = process.env.PORT || 5000;
 conn();
 
 app.use(express.json());
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join("public")));
 
-async function run() {
-  const book = new Book({ name: "book 1" });
-  // await book.save();
-  console.log(book);
-}
-run();
+//Prevent api access
+// app.use("/api", (req, res, next) => {
+//   const referer = req.get("referer") || "";
+//   if (!referer.startsWith(process.env.HOST + ":" + PORT)) {
+//     return res.redirect("/");
+//   }
+//   next();
+// });
 
-// Route to get all Book
-app.get("/api/books", (req, res) => {
-  res.json({ mongo_uri: process.env.MONGO_URI });
+//Api Routes
+app.use("/api/v1/books", require("./routes/book"));
+
+//Pages Routes
+app.get("/", (req, res) => {
+  res.render("layout", { page: "index", title: "API" });
+});
+app.get("/docs", (req, res) => {
+  res.render("layout", { page: "docs", title: "Docs" });
+});
+app.get("/apiv", (req, res) => {
+  res.render("layout", { page: "apiv", title: "Api v1" });
+});
+app.get("/about", (req, res) => {
+  res.render("layout", { page: "about", title: "About" });
+});
+app.get("*", (req, res) => {
+  res.render("layout", { page: "404", title: "404" });
 });
 
-// // Route to get a single book by ID
-// app.get("/api/Book/:id", (req, res) => {
-//   const bookId = parseInt(req.params.id, 10);
-//   const book = Book.find((b) => b.id === bookId);
-
-//   if (book) {
-//     res.json(book);
-//   } else {
-//     res.status(404).send("Book not found");
-//   }
-// });
-
-// // Route to add a new book
-// app.post("/api/Book", (req, res) => {
-//   const newBook = req.body;
-//   newBook.id = Book.length + 1;
-//   Book.push(newBook);
-//   res.status(201).json(newBook);
-// });
-
-// // Route to update an existing book
-// app.put("/api/Book/:id", (req, res) => {
-//   const bookId = parseInt(req.params.id, 10);
-//   const bookIndex = Book.findIndex((b) => b.id === bookId);
-
-//   if (bookIndex !== -1) {
-//     const updatedBook = { ...Book[bookIndex], ...req.body };
-//     Book[bookIndex] = updatedBook;
-//     res.json(updatedBook);
-//   } else {
-//     res.status(404).send("Book not found");
-//   }
-// });
-
-// // Route to delete a book
-// app.delete("/api/Book/:id", (req, res) => {
-//   const bookId = parseInt(req.params.id, 10);
-//   const bookIndex = Book.findIndex((b) => b.id === bookId);
-
-//   if (bookIndex !== -1) {
-//     Book.splice(bookIndex, 1);
-//     res.status(204).send();
-//   } else {
-//     res.status(404).send("Book not found");
-//   }
-// });
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running...`));
