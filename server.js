@@ -41,7 +41,7 @@ app.get("/apiv", (req, res) => {
 app.get("/about", (req, res) => {
   res.render("layout", { page: "about", title: "About" });
 });
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.render("layout", { page: "404", title: "404" });
 });
 
