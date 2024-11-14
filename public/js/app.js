@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const prettifyButton = document.getElementById("prettify");
   const minifyButton = document.getElementById("minify");
   const endpointSpans = document.querySelectorAll(".endpoints span");
-  const defaultURL = "http://localhost:8000/api/v1/books"; // Default URL
+  // const defaultURL = "http://localhost:8000/api/v1/books";
+  const defaultURL = "https://bookstore-api-lx5m.onrender.com/api/v1/books";
 
   let fetchedData = null; // Store fetched data
 
