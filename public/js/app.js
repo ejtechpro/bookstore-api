@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const queryInput = document.getElementById("query");
   const outputElement = document.getElementById("books");
   const resultElement = document.querySelector(".result");
-  const loadingElement = document.getElementById("loading");
   const prettifyButton = document.getElementById("prettify");
   const minifyButton = document.getElementById("minify");
   const endpointSpans = document.querySelectorAll(".endpoints span");
@@ -77,8 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
         displayData(data, "prettify");
       }, 1000);
     } catch (error) {
-      // Hide the loading indicator on error
-      loadingElement.style.display = "none";
       outputElement.textContent = `Failed to fetch data: ${error.message}`;
       resultElement.textContent = `Result: Error - ${error.message}`;
     }
@@ -90,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handle span clicks to update input field with URL
   endpointSpans.forEach((span) => {
     span.addEventListener("click", () => {
-      queryInput.value = `http://localhost:8000/api/v1/${span.textContent.trim()}`;
+      queryInput.value = `https://bookstore-api-lx5m.onrender.com/api/v1/${span.textContent.trim()}`;
     });
   });
 
