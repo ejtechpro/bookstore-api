@@ -389,9 +389,8 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  .overview{
-    font-family: "Comic Sans MS", "Brush Script", cursive;
-
+  .overview p {
+    font-family: monospace, sans-serif;
   }
   .req_container {
     flex-flow: column;
@@ -427,4 +426,11 @@ footer p {
 .notfound .message {
   font-size: 22px;
   margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .body {
+    height: auto;
+    overflow: auto;
+  }
 }
