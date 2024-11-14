@@ -389,6 +389,10 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  .overview{
+    font-family: "Comic Sans MS", "Brush Script", cursive;
+
+  }
   .req_container {
     flex-flow: column;
   }

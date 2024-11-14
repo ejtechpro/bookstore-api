@@ -72,9 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
 
       // Display the fetched data in the prettified format by default
-      setTimeout(() => {
+     
         displayData(data, "prettify");
-      }, 1000);
+     
     } catch (error) {
       outputElement.textContent = `Failed to fetch data: ${error.message}`;
       resultElement.textContent = `Result: Error - ${error.message}`;
