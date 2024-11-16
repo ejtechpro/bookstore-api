@@ -1,100 +1,73 @@
 <div class="container">
   <section id="books">
-    <h2>Books</h2>
-
-    <!-- Endpoint: GET /books -->
+    <h2>Book docs</h2>
     <div class="endpoint">
       <div class="endpoint-header">
-        <h3>GET /books</h3>
-        <button class="copy-btn" data-clipboard-text="GET /books">
+        <h4>GET: https://bookstore-api-lx5m.onrender.com/api/v1/books</h4>
+        <button
+          class="copy-btn"
+          data-clipboard-text="https://bookstore-api-lx5m.onrender.com/api/v1/books"
+        >
           Copy
         </button>
       </div>
       <p>
-        <strong>Description:</strong> Retrieves a list of books with optional query parameters for filtering and pagination.
+        <strong>Description:</strong> Retrieves a list of books with optional
+        query parameters for filtering and pagination.
       </p>
       <p><strong>Query Parameters:</strong></p>
       <ul>
         <li>
-          <strong>q</strong> (optional) - Search query to filter books by title, genre, authors, isbn, or publisher.
+          <strong>q</strong> (optional) - Search query to filter books by title,
+          genre, authors, isbn, or publisher.
         </li>
         <li>
-          <strong>limit</strong> (optional) - The number of books to return (default is 10).
+          <strong>limit</strong> (optional) - The number of books to return
+          (default is 10).
         </li>
         <li>
-          <strong>offset</strong> (optional) - Skip a specified number of books for pagination (default is 0).
+          <strong>offset</strong> (optional) - Skip a specified number of books
+          for pagination (default is 0).
+        </li>
+        <li>
+          <strong>count/book</strong> (optional) - Counts number of books
         </li>
       </ul>
       <p><strong>Example Request:</strong></p>
-      <pre>GET /books?q=Harry Potter&limit=5&offset=0</pre>
-      <p><strong>Response:</strong></p>
-      <pre>
-[
-  {
-    "_id": "string",
-    "title": "Harry Potter and the Philosopher's Stone",
-    "authors": ["J.K. Rowling"],
-    "genre": "Fantasy",
-    "isbn": "978-0747532743",
-    "publisher": "Bloomsbury"
-  },
-  {
-    "_id": "string",
-    "title": "A Game of Thrones",
-    "authors": ["George R. R. Martin"],
-    "genre": "Fantasy",
-    "isbn": "978-0553593716",
-    "publisher": "Bantam Books"
-  }
-]
-      </pre>
+      <b>GET /books?q=Harry Potter&limit=5&offset=0</b>
     </div>
 
     <!-- Endpoint: POST /books -->
     <div class="endpoint">
       <div class="endpoint-header">
-        <h3>POST /books</h3>
-        <button class="copy-btn" data-clipboard-text="POST /books">
+        <h4>POST: https://bookstore-api-lx5m.onrender.com/api/v1/books</h4>
+        <button
+          class="copy-btn"
+          data-clipboard-text="https://bookstore-api-lx5m.onrender.com/api/v1/books"
+        >
           Copy
         </button>
       </div>
-      <p>
-        <strong>Description:</strong> Creates a new book in the database.
-      </p>
+      <p><strong>Description:</strong> Creates a new book in the database.</p>
       <p><strong>Request Body:</strong></p>
-      <pre>
-{
-  "title": "New Book Title",
-  "authors": ["Author Name"],
-  "genre": "Fiction",
-  "isbn": "978-1234567890",
-  "publisher": "Publisher Name"
-}
-      </pre>
-      <p><strong>Response:</strong></p>
-      <pre>
-{
-  "_id": "string",
-  "title": "New Book Title",
-  "authors": ["Author Name"],
-  "genre": "Fiction",
-  "isbn": "978-1234567890",
-  "publisher": "Publisher Name"
-}
-      </pre>
+      <p>
+        { "title": "New Book Title", "authors": ["Author Name"], "genre":
+        "Fiction", "isbn": "978-1234567890", "publisher": "Publisher Name" }
+      </p>
     </div>
 
     <!-- Endpoint: GET /books/:id -->
     <div class="endpoint">
       <div class="endpoint-header">
-        <h3>GET /books/:id</h3>
-        <button class="copy-btn" data-clipboard-text="GET /books/:id">
+        <h4>GET: https://bookstore-api-lx5m.onrender.com/api/v1/books/:id</h4>
+        <button
+          class="copy-btn"
+          data-clipboard-text="https://bookstore-api-lx5m.onrender.com/api/v1/books/:id"
+        >
           Copy
         </button>
       </div>
-      <p>
-        <strong>Description:</strong> Retrieves a specific book by its ID.
-      </p>
+      <p><strong>Description:</strong> Retrieves a specific book by its ID.</p>
       <p><strong>Parameters:</strong></p>
       <ul>
         <li>
@@ -102,30 +75,32 @@
         </li>
       </ul>
       <p><strong>Example Request:</strong></p>
-      <pre>GET /books/60b725f15c29b0c9d1d2d7e5</pre>
+      <p>
+        GET:
+        https://bookstore-api-lx5m.onrender.com/api/v1/books/60b725f15c29b0c9d1d2d7e5
+      </p>
       <p><strong>Response:</strong></p>
-      <pre>
-{
-  "_id": "60b725f15c29b0c9d1d2d7e5",
-  "title": "Harry Potter and the Philosopher's Stone",
-  "authors": ["J.K. Rowling"],
-  "genre": "Fantasy",
-  "isbn": "978-0747532743",
-  "publisher": "Bloomsbury"
-}
-      </pre>
+      <p>
+        { "_id": "60b725f15c29b0c9d1d2d7e5", "title": "Harry Potter and the
+        Philosopher's Stone", "authors": ["J.K. Rowling"], "genre": "Fantasy",
+        "isbn": "978-0747532743", "publisher": "Bloomsbury" }
+      </p>
     </div>
 
     <!-- Endpoint: PUT /books/:id -->
     <div class="endpoint">
       <div class="endpoint-header">
-        <h3>PUT /books/:id</h3>
-        <button class="copy-btn" data-clipboard-text="PUT /books/:id">
+        <h4>PUT: https://bookstore-api-lx5m.onrender.com/api/v1/books/:id</h4>
+        <button
+          class="copy-btn"
+          data-clipboard-text="https://bookstore-api-lx5m.onrender.com/api/v1/books/:id"
+        >
           Copy
         </button>
       </div>
       <p>
-        <strong>Description:</strong> Updates an existing book's details by its ID.
+        <strong>Description:</strong> Updates an existing book's details by its
+        ID.
       </p>
       <p><strong>Parameters:</strong></p>
       <ul>
@@ -134,39 +109,32 @@
         </li>
       </ul>
       <p><strong>Request Body:</strong></p>
-      <pre>
-{
-  "title": "Updated Book Title",
-  "authors": ["Updated Author"],
-  "genre": "Updated Genre",
-  "isbn": "978-0987654321",
-  "publisher": "Updated Publisher"
-}
-      </pre>
+      <p>
+        { "title": "Updated Book Title", "authors": ["Updated Author"], "genre":
+        "Updated Genre", "isbn": "978-0987654321", "publisher": "Updated
+        Publisher" }
+      </p>
       <p><strong>Response:</strong></p>
-      <pre>
-{
-  "_id": "string",
-  "title": "Updated Book Title",
-  "authors": ["Updated Author"],
-  "genre": "Updated Genre",
-  "isbn": "978-0987654321",
-  "publisher": "Updated Publisher"
-}
-      </pre>
+      <p>
+        { "_id": "string", "title": "Updated Book Title", "authors": ["Updated
+        Author"], "genre": "Updated Genre", "isbn": "978-0987654321",
+        "publisher": "Updated Publisher" }
+      </p>
     </div>
 
-    <!-- Endpoint: DELETE /books/:id -->
     <div class="endpoint">
       <div class="endpoint-header">
-        <h3>DELETE /books/:id</h3>
-        <button class="copy-btn" data-clipboard-text="DELETE /books/:id">
+        <h4>
+          DELETE: https://bookstore-api-lx5m.onrender.com/api/v1/books/:id
+        </h4>
+        <button
+          class="copy-btn"
+          data-clipboard-text="https://bookstore-api-lx5m.onrender.com/api/v1/books/:id"
+        >
           Copy
         </button>
       </div>
-      <p>
-        <strong>Description:</strong> Deletes a specific book by its ID.
-      </p>
+      <p><strong>Description:</strong> Deletes a specific book by its ID.</p>
       <p><strong>Parameters:</strong></p>
       <ul>
         <li>
@@ -174,13 +142,78 @@
         </li>
       </ul>
       <p><strong>Example Request:</strong></p>
-      <pre>DELETE /books/60b725f15c29b0c9d1d2d7e5</pre>
+      <p>
+        DELETE
+        https://bookstore-api-lx5m.onrender.com/api/v1/books/60b725f15c29b0c9d1d2d7e5
+      </p>
       <p><strong>Response:</strong></p>
-      <pre>
-{
-  "message": "Book deleted successfully"
-}
-      </pre>
+      <p>{ "message": "Book deleted successfully" }</p>
+    </div>
+    <div class="endpoint">
+      <div class="endpoint-header">
+        <h4>PATCH: https://bookstore-api-lx5m.onrender.com/api/v1/books/:id</h4>
+        <button
+          class="copy-btn"
+          data-clipboard-text="https://bookstore-api-lx5m.onrender.com/api/v1/books/:id"
+        >
+          Copy
+        </button>
+      </div>
+      <p><strong>Description:</strong> Updates a specific book by its ID.</p>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>
+          <strong>id</strong> (required) - The unique identifier of the book.
+        </li>
+      </ul>
+      <p><strong>Example Request:</strong></p>
+      <p>
+        PATCH
+        https://bookstore-api-lx5m.onrender.com/api/v1/books/60b725f15c29b0c9d1d2d7e5
+      </p>
+    </div>
+
+    <div class="endpoint">
+      <div class="endpoint-header">
+        <h4>
+          OPTIONS: https://bookstore-api-lx5m.onrender.com/api/v1/books/:id
+        </h4>
+        <button
+          class="copy-btn"
+          data-clipboard-text="https://bookstore-api-lx5m.onrender.com/api/v1/books/:id"
+        >
+          Copy
+        </button>
+      </div>
+      <p><strong>Description:</strong> List allowed methods</p>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>
+          <strong>id</strong> (required) - The unique identifier of the book.
+        </li>
+      </ul>
+      <p><strong>Example Request:</strong></p>
+      <p>
+        OPTIONS
+        https://bookstore-api-lx5m.onrender.com/api/v1/books/60b725f15c29b0c9d1d2d7e5
+      </p>
+    </div>
+    <div class="endpoint">
+      <div class="endpoint-header">
+        <h4>PROPFIND: https://bookstore-api-lx5m.onrender.com/api/v1/books</h4>
+        <button
+          class="copy-btn"
+          data-clipboard-text="https://bookstore-api-lx5m.onrender.com/api/v1/books"
+        >
+          Copy
+        </button>
+      </div>
+      <p>
+        <strong>Description:</strong>This would return the properties of books
+        in a specific format (e.g., XML)
+      </p>
+      <p><strong>Example Request:</strong></p>
+      <p>PROPFIND https://bookstore-api-lx5m.onrender.com/api/v1/books</p>
     </div>
   </section>
 </div>

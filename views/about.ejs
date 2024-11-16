@@ -1,124 +1,115 @@
-<!-- <div class="container">
-  <h3>JSON Viewer</h3>
-  <button id="copy-btn">Copy to Clipboard</button>
-  <button id="collapse-btn">Collapse/Expand</button>
-  <pre id="json-container"></pre>
+<div class="container">
+  <section>
+    <h3>What is this?</h3>
+    <p>
+      This website provides a RESTful API interface to a highly detailed
+      database of books, built from thousands of lines of data. We focus on a
+      vast collection of books, including detailed information on their authors,
+      genres, publishers, and more. By using this website, you can access
+      information on books, their summaries, ratings, reviews, and additional
+      metadata.
+    </p>
+  </section>
+
+  <section>
+    <h3>What is an API?</h3>
+    <p>
+      An API (Application Programming Interface) allows developers to interact
+      with an application through a set of interfaces. In this case, the
+      application is a comprehensive database of books, and the interfaces are
+      URL links.
+    </p>
+    <p>
+      A RESTful API follows a set of conventions based on HTTP verbs, errors,
+      and hyperlinks, making it easier for other applications to consume data.
+    </p>
+  </section>
+
+  <section>
+    <h3>Aren't there already many book websites?</h3>
+    <p>
+      Yes, there are plenty of them! However, each one may have its own version
+      of the data. This leads to discrepancies and delays in updating when new
+      books or editions are released.
+    </p>
+    <p>
+      Our goal is to provide a single, reliable source of book data that other
+      websites and applications can use, ensuring consistency and collaboration
+      across the industry.
+    </p>
+  </section>
+
+  <section>
+    <h3>How much information is stored here?</h3>
+    <p>We store a lot of data! Our database includes:</p>
+    <ul>
+      <li>Book Details (Title, ISBN, etc.)</li>
+      <li>Authors and Biographies</li>
+      <li>Genres and Sub-genres</li>
+      <li>Publishers and Editions</li>
+      <li>Reviews and Ratings</li>
+      <li>Release Dates</li>
+      <li>And much more!</li>
+    </ul>
+    <p>
+      For a full overview of the available data, check out the documentation.
+    </p>
+  </section>
+
+  <section>
+    <h3>The API is missing something!</h3>
+    <p>
+      We’re aware that there’s always room for improvement. Feel free to
+      contribute or submit issues on GitHub.
+    </p>
+    <p>
+      Got ideas for new features? Join our community on Slack! Sign up and visit
+      our team.
+    </p>
+  </section>
+
+  <section>
+    <h3>Who built this?</h3>
+    <p>
+      This API was developed by <i>Emmanuel Juma (EJ)</i> as a passion project
+      to provide a unified source for book-related data. Over time, we’ve
+      expanded the database, improved performance, and collaborated with other
+      developers to enhance the platform.
+    </p>
+    <p>
+      We welcome contributions from the community, and the current maintainers
+      include <i>Jefferson Weeddy</i> who continue to improve and grow the
+      project.
+    </p>
+  </section>
+
+  <section>
+    <h3>Where did you get all of this data?</h3>
+    <p>We’ve gathered our book information from multiple reliable sources:</p>
+    <ul>
+      <li>Public domain data</li>
+      <li>Publishers' APIs</li>
+      <li>Contributions from authors and readers</li>
+      <li>Open data initiatives</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>What's the technology stack?</h3>
+    <p>
+      Our API is originally built using <b>ejs template engine</b>, and we will
+      migrated to <b>ReactJs</b> soon, a more scalable solution that serves data
+      through static files for improved performance. The platform is hosted on
+      <b
+        ><a href="https://render.com" target="_blank" rel="noopener noreferrer"
+          >render.com</a
+        ></b
+      >, with a continuous integration <i>CI/CD</i> pipeline to ensure smooth
+      deployment.
+    </p>
+    <p>
+      The frontend uses <b>ejs template engine</b>, and the backend is powered
+      by <b>Node.js &bull; express framework &bull; MongoDB</b>.
+    </p>
+  </section>
 </div>
-
-<script>
-  // JSON data
-  const jsonData = {
-    id: 3,
-    name: "New Author",
-    dob: "1980-05-15",
-  };
-
-  // Function to format and display the JSON
-  function displayJSON(json) {
-    const formattedJson = JSON.stringify(json, null, 2); // Pretty-print with 2 spaces indentation
-    document.getElementById("json-container").textContent = formattedJson;
-  }
-
-  // Copy JSON to clipboard
-  function copyToClipboard() {
-    const jsonText = document.getElementById("json-container").textContent;
-    navigator.clipboard
-      .writeText(jsonText)
-      .then(() => {
-        alert("JSON copied to clipboard!");
-      })
-      .catch((err) => {
-        console.error("Error copying JSON: ", err);
-      });
-  }
-
-  // Collapse/Expand JSON (toggle)
-  function toggleJSON() {
-    const jsonContainer = document.getElementById("json-container");
-    const isCollapsed = jsonContainer.textContent.includes("{");
-    if (isCollapsed) {
-      const collapsedJson = JSON.stringify(jsonData); // Compact format
-      jsonContainer.textContent = collapsedJson;
-    } else {
-      const formattedJson = JSON.stringify(jsonData, null, 2); // Pretty-print
-      jsonContainer.textContent = formattedJson;
-    }
-  }
-
-  // Event listeners for buttons
-  document
-    .getElementById("copy-btn")
-    .addEventListener("click", copyToClipboard);
-  document.getElementById("collapse-btn").addEventListener("click", toggleJSON);
-
-  // Initially display the formatted JSON
-  displayJSON(jsonData);
-</script> -->
-
-
-
-
-
-    <section>
-        <h3>What is this?</h3>
-        <p>This website provides a RESTful API interface to a highly detailed database of books, built from thousands of lines of data. We focus on a vast collection of books, including detailed information on their authors, genres, publishers, and more. By using this website, you can access information on books, their summaries, ratings, reviews, and additional metadata.</p>
-    </section>
-
-    <section>
-        <h3>What is an API?</h3>
-        <p>An API (Application Programming Interface) allows developers to interact with an application through a set of interfaces. In this case, the application is a comprehensive database of books, and the interfaces are URL links.</p>
-        <p>A RESTful API follows a set of conventions based on HTTP verbs, errors, and hyperlinks, making it easier for other applications to consume data.</p>
-    </section>
-
-    <section>
-        <h3>Aren't there already many book websites?</h3>
-        <p>Yes, there are plenty of them! However, each one may have its own version of the data. This leads to discrepancies and delays in updating when new books or editions are released.</p>
-        <p>Our goal is to provide a single, reliable source of book data that other websites and applications can use, ensuring consistency and collaboration across the industry.</p>
-    </section>
-
-    <section>
-        <h3>How much information is stored here?</h3>
-        <p>We store a lot of data! Our database includes:</p>
-        <ul>
-            <li>Book Details (Title, ISBN, etc.)</li>
-            <li>Authors and Biographies</li>
-            <li>Genres and Sub-genres</li>
-            <li>Publishers and Editions</li>
-            <li>Reviews and Ratings</li>
-            <li>Release Dates</li>
-            <li>And much more!</li>
-        </ul>
-        <p>For a full overview of the available data, check out the documentation.</p>
-    </section>
-
-    <section>
-        <h3>The API is missing something!</h3>
-        <p>We’re aware that there’s always room for improvement. Feel free to contribute or submit issues on GitHub.</p>
-        <p>Got ideas for new features? Join our community on Slack! Sign up and visit our team.</p>
-    </section>
-
-    <section>
-        <h3>Who built this?</h3>
-        <p>This API was developed by [Your Name] as a passion project to provide a unified source for book-related data. Over time, we’ve expanded the database, improved performance, and collaborated with other developers to enhance the platform.</p>
-        <p>We welcome contributions from the community, and the current maintainers include [Names of contributors] who continue to improve and grow the project.</p>
-    </section>
-
-    <section>
-        <h3>Where did you get all of this data?</h3>
-        <p>We’ve gathered our book information from multiple reliable sources:</p>
-        <ul>
-            <li>Public domain data</li>
-            <li>Publishers' APIs</li>
-            <li>Contributions from authors and readers</li>
-            <li>Open data initiatives</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>What's the technology stack?</h3>
-        <p>Our API was originally built using [insert technology], and we’ve migrated to a more scalable solution that serves data through static files for improved performance. The platform is hosted on [insert hosting service], with a continuous integration pipeline to ensure smooth deployment.</p>
-        <p>The frontend uses [React/another framework], and the backend is powered by [insert backend technologies].</p>
-    </section>
-  </div>
-
-

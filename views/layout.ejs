@@ -6,17 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
     <title><%= title %></title>
     <link rel="shortcut icon" href="/img/book.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   
-<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <%- include("partials/header", {}) %>
-    <main id="main">
-      <%- include(page) %> <%- include("partials/footer") %>
-    </main>
+    <main id="main"><%- body %> <%- include("partials/footer") %></main>
+    <div class="copied">Copied</div>
     <script src="/js/app.js"></script>
   </body>
 </html>

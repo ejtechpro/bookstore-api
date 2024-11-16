@@ -25,11 +25,11 @@
   <section class="req_container">
     <div class="requests">
       <div class="request_input">
-        <div class="url"><i class="fas fa-copy"></i></div>
+        <div class="url copy-btn"><i class="fas fa-copy"></i></div>
         <input
           type="text"
           id="query"
-          placeholder="Enter query, e.g., ?title=python or book ID"
+          placeholder="Enter query"
         />
         <button>Send</button>
       </div>
@@ -38,8 +38,9 @@
           Endpoints! Try:
           <span>books</span> &bull;
           <span>books?q=To Kill a Mockingbird</span> &bull;
-          <span>books?limit=1</span> &bull; <span>books?limit=5&offset=5</span>
-        </small>
+          <span>books?limit=1</span> &bull; <span>books?limit=5&offset=5</span> &bull;
+          <span>books/count/book</span>
+          </small>
       </div>
       <div class="direct_access_link">
         Direct access link:

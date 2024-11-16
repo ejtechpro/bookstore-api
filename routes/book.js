@@ -58,7 +58,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.get("/count", async (req, res) => {
+router.get("/count/book", async (req, res) => {
   try {
     const { q } = req.query;
     const query = {};
